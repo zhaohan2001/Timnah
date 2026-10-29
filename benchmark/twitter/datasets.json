@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "release": "workloads-20261029",
+  "repository": "zhaohan2001/Timnah",
+  "datasets": {
+    "ts": {
+      "binary_bytes": 13124917104,
+      "binary_sha256": "d15277d86065ed443681e81c9ca23ffb145e41f5fdbc61f6c6a9b1c9eed6e491",
+      "compressed_bytes": 1941951592,
+      "compressed_sha256": "c33eb62ff6683109934eff6a24f0ca0f2e83fbd2c16ec5cf8bc664facebc683c",
+      "parts": [
+        {
+          "name": "ts.bin.zst.part-000",
+          "bytes": 536870912,
+          "sha256": "18e7745a6fc2c7ff91af2e732d2cd1990d190107c5c215858ccdc37988ec3970"
+        },
+        {
+          "name": "ts.bin.zst.part-001",
+          "bytes": 536870912,
+          "sha256": "3be78e4f9d7c53928d6380451eb21183a0d5c5e834f0ca49ee32099f6451fc45"
+        },
+        {
+          "name": "ts.bin.zst.part-002",
+          "bytes": 536870912,
+          "sha256": "23066df08080fc49ef5fcc13a5c24342ce261d148d672262d8f38b45154fcd03"
+        },
+        {
+          "name": "ts.bin.zst.part-003",
+          "bytes": 331338856,
+          "sha256": "e6f8fd09415885402bd6ec7f6208225b3da4af7b7d6ba1e7cd6564dbfcf58418"
+        }
+      ],
+      "manifest": {
+        "format": "TTRACE01",
+        "workload": "ts",
+        "source_url": "https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster3.sort.zst",
+        "scope": "complete_Twitter_cluster3",
+        "source_sha256": "0317cdf99d75f92cc435022ad770f9f0a8de53118c5c4f5d3222225fb6a7723c",
+        "binary_sha256": "d15277d86065ed443681e81c9ca23ffb145e41f5fdbc61f6c6a9b1c9eed6e491",
+        "records": 820307312,
+        "unique_keys": 6265139,
+        "raw_unique_keys": 6265139,
+        "raw_records": 820307312,
+        "reads": 814633726,
+        "updates": 5673586,
+        "excluded_delete": 0,
+        "first_timestamp": 0,
+        "last_timestamp": 630361,
+        "timestamp_regressions": 0,
+        "original_operations": {
+          "cas": 91862,
+          "gets": 99846,
+          "add": 5581724,
+          "get": 814533880
+        },
+        "key_bytes": 8,
+        "value_bytes": 8,
+        "adaptation": "Collision-free first-seen key IDs; bijective 64-bit key mixing; reads map to Search and writes to Update; deterministic 64-bit surrogate values; delete records excluded; TTL and cache conditional-write semantics not modeled.",
+        "replay": "Observed input order retained; concurrent workers may reorder execution; finite traces wrap without resampling."
+      }
+    },
+    "tt": {
+      "binary_bytes": 102335280,
+      "binary_sha256": "5c92a7285ce091be811716f7b2a9d6d94927677822b33ffa15447c273b285c88",
+      "compressed_bytes": 16809884,
+      "compressed_sha256": "d6d53469acdd193b95ae17731904960c40544f0306084cb9b336fe373190a31a",
+      "parts": [
+        {
+          "name": "tt.bin.zst.part-000",
+          "bytes": 16809884,
+          "sha256": "d6d53469acdd193b95ae17731904960c40544f0306084cb9b336fe373190a31a"
+        }
+      ],
+      "manifest": {
+        "format": "TTRACE01",
+        "workload": "tt",
+        "source_url": "https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster22.sort.zst",
+        "scope": "Twitter_cluster22_observed_0_3600_seconds",
+        "source_sha256": "5d21d9946e78bc0c56342b7acf72bd0c3ba3eb0c5ba7750c949130847a9ae892",
+        "binary_sha256": "5c92a7285ce091be811716f7b2a9d6d94927677822b33ffa15447c273b285c88",
+        "records": 6395948,
+        "unique_keys": 2843926,
+        "raw_unique_keys": 2844048,
+        "raw_records": 6396727,
+        "reads": 4959496,
+        "updates": 1436452,
+        "excluded_delete": 779,
+        "first_timestamp": 0,
+        "last_timestamp": 3599,
+        "timestamp_regressions": 0,
+        "original_operations": {
+          "delete": 779,
+          "set": 531881,
+          "incr": 904571,
+          "get": 4959496
+        },
+        "key_bytes": 8,
+        "value_bytes": 8,
+        "adaptation": "Collision-free first-seen key IDs; bijective 64-bit key mixing; reads map to Search and writes to Update; deterministic 64-bit surrogate values; delete records excluded; TTL and cache conditional-write semantics not modeled.",
+        "replay": "Observed input order retained; concurrent workers may reorder execution; finite traces wrap without resampling.",
+        "cluster": 22,
+        "category": 3,
+        "interval_experiment": {
+          "cluster": 22,
+          "interval_candidates_seconds": [
+            3600,
+            1800,
+            900
+          ],
+          "start_timestamp": 0,
+          "minimum_read_fraction": 0.6,
+          "selection_metric": "Timnah round-9 DRAM Search hit fraction",
+          "minimum_selected_hit_fraction": 0.8,
+          "selection_rule": "First duration in the declared order meeting the hit criterion; throughput does not select the interval.",
+          "num_load": 100000000,
+          "num_run": 100000000,
+          "num_rounds": 10,
+          "num_threads": 30,
+          "preserve_all_interval_measurements": true,
+          "full_period_baseline": "/home/hzhao/transient-cluster22-alltime-20261029/candidate/results.json",
+          "source_parent_binary_sha256": "9f050bcbe3bbd5e66256ae50625c548700378505ae249753d0121f88977a0f36"
+        },
+        "interval_seconds": {
+          "start": 0,
+          "end_exclusive": 3600
+        },
+        "preload_provenance": {
+          "parent_binary_sha256": "9f050bcbe3bbd5e66256ae50625c548700378505ae249753d0121f88977a0f36",
+          "parent_source_sha256": "44e663699ad04d63d1ec95da908d0af225f83b98a199557d16aaf8c06ff22007",
+          "parent_unique_keys": 403581142,
+          "preload_keys": 100000000,
+          "active_observed_keys": 2843926,
+          "window_cold_real_keys": 97156074,
+          "mapping": "First-seen identities are shared with the complete source; payload prefix verified byte-for-byte. All IDs 1..100000000 occur in the complete source. Runtime background count denotes keys not observed in this window."
+        }
+      }
+    },
+    "tc": {
+      "binary_bytes": 20834206176,
+      "binary_sha256": "1219fb3b484073b57bac4ac308e5b1d98314cf5d7a48058b8f801460b13e66ae",
+      "compressed_bytes": 4194641781,
+      "compressed_sha256": "3ed21b3102dad1605ae702993888d7fafaa11acbc1cf2d0e3cef279426431d19",
+      "parts": [
+        {
+          "name": "tc-cluster8.bin.zst.part-000",
+          "bytes": 536870912,
+          "sha256": "89dd7ece0f3cafbd88063f0f9f889a1b92666c8aeac24728007c10d0593f3f82"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-001",
+          "bytes": 536870912,
+          "sha256": "c71ac7e5b3f11c1df069ffc9e62a30e73844a2e7153bd7938e95457652fbb6d7"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-002",
+          "bytes": 536870912,
+          "sha256": "ca39c2e61f80639a26cd5baf84a97fff45075e45f4024fe86fbc514d8e9c808c"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-003",
+          "bytes": 536870912,
+          "sha256": "4857465c1111f637e2b85504804042c8f33b6e7d3ea75ea92add4722f4313462"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-004",
+          "bytes": 536870912,
+          "sha256": "0674f71934672d6a39be87d53f1e56ebccff8d416b8fe05892ff229561949f7e"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-005",
+          "bytes": 536870912,
+          "sha256": "97fcc774b22c862eacbd25f55044d5e620972dbe6cae298fccc0bce8a6eb7731"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-006",
+          "bytes": 536870912,
+          "sha256": "e16cee2d7d38c157dfa6219a892e1bac590b516ecfec1d50c52f1d66233c6729"
+        },
+        {
+          "name": "tc-cluster8.bin.zst.part-007",
+          "bytes": 436545397,
+          "sha256": "ab2b90ccbad473fbdb6177480da677ed5d55d253526dec47ed02f41f81489a2e"
+        }
+      ],
+      "manifest": {
+        "format": "TTRACE01",
+        "workload": "tc",
+        "source_url": "https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster8.sort.zst",
+        "scope": "complete_Twitter_cluster8",
+        "source_sha256": "983f2cad814a1a9aaf73afbbd805cb9da8e77d9744a328989a305e6d8a517e21",
+        "binary_sha256": "1219fb3b484073b57bac4ac308e5b1d98314cf5d7a48058b8f801460b13e66ae",
+        "records": 1302137879,
+        "unique_keys": 267311,
+        "raw_unique_keys": 267311,
+        "raw_records": 1302137879,
+        "reads": 655693888,
+        "updates": 646443991,
+        "excluded_delete": 0,
+        "first_timestamp": 0,
+        "last_timestamp": 628689,
+        "timestamp_regressions": 0,
+        "original_operations": {
+          "set": 646443991,
+          "get": 655693888
+        },
+        "key_bytes": 8,
+        "value_bytes": 8,
+        "adaptation": "Collision-free first-seen key IDs; bijective 64-bit key mixing; reads map to Search and writes to Update; deterministic 64-bit surrogate values; delete records excluded; TTL and cache conditional-write semantics not modeled.",
+        "replay": "Observed input order retained; concurrent workers may reorder execution; finite traces wrap without resampling.",
+        "cluster": 8,
+        "category": 2,
+        "workload_category": "Compute",
+        "official_archive_sha1": "20b492c4b6892187b90f7709ede0054250387d7d",
+        "preload": {
+          "records": 100000000,
+          "observed_keys": 267311,
+          "cold_records": 99732689
+        }
+      }
+    },
+    "w": {
+      "binary_bytes": 124733152,
+      "binary_sha256": "14b8af333d7bad0a554a00d2c63f39957e482b282ddb3696bcc547fe2d3b493c",
+      "compressed_bytes": 7563420,
+      "compressed_sha256": "493b1a2bfa9250ff582ec17b891953de79d9cef0996f348acb2c72463ecfe134",
+      "parts": [
+        {
+          "name": "w.bin.zst.part-000",
+          "bytes": 7563420,
+          "sha256": "493b1a2bfa9250ff582ec17b891953de79d9cef0996f348acb2c72463ecfe134"
+        }
+      ],
+      "manifest": {
+        "format": "TTRACE01",
+        "workload": "w",
+        "source_url": "https://drive.google.com/uc?export=download&id=1t1lsBO0p2lSQSxPam4Rh7tTYFPdkT7cx",
+        "scope": "FIU_webmail_all_processed_by_Ditto",
+        "source_sha256": "43cdf42e1f712d3be4d4153589c502c0ac007ac1919e3e41afc8416eb096f9da",
+        "binary_sha256": "14b8af333d7bad0a554a00d2c63f39957e482b282ddb3696bcc547fe2d3b493c",
+        "records": 7795815,
+        "unique_keys": 488667,
+        "raw_unique_keys": 488667,
+        "raw_records": 7795815,
+        "reads": 1413830,
+        "updates": 6381985,
+        "excluded_delete": 0,
+        "first_timestamp": 0,
+        "last_timestamp": 0,
+        "timestamp_regressions": 0,
+        "original_operations": {
+          "R": 1413830,
+          "W": 6381985
+        },
+        "key_bytes": 8,
+        "value_bytes": 8,
+        "adaptation": "Collision-free first-seen key IDs; bijective 64-bit key mixing; reads map to Search and writes to Update; deterministic 64-bit surrogate values; delete records excluded; TTL and cache conditional-write semantics not modeled.",
+        "replay": "Observed input order retained; concurrent workers may reorder execution; finite traces wrap without resampling.",
+        "published_reference_verification": {
+          "reference_url": "https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/cacheDatasets/fiu/fiu_webmail.cs.fiu.edu-110108-113008.oracleGeneral.zst",
+          "reference_sha256": "6c7c95eb29ae8f0be1824152d8132771d7444b51bd3d6eb83fd1ea0c05c9802c",
+          "reference_records": 7795815,
+          "reference_unique_keys": 488667,
+          "prepared_records": 7795815,
+          "prepared_unique_keys": 488667,
+          "first_seen_key_sequence_identical": true,
+          "key_mismatches": 0,
+          "first_mismatch": null,
+          "timestamp_min": 0,
+          "timestamp_max": 1731590,
+          "timestamp_span": 1731590,
+          "timestamp_regressions": 0,
+          "object_sizes": [
+            8
+          ],
+          "reference_has_operation_types": false,
+          "active_day_bins": 21,
+          "requests_per_day": {
+            "0": 490928,
+            "1": 292649,
+            "2": 342501,
+            "3": 334410,
+            "4": 274725,
+            "5": 237942,
+            "6": 362369,
+            "7": 276185,
+            "8": 467895,
+            "9": 58618,
+            "10": 366987,
+            "11": 1048207,
+            "12": 399306,
+            "13": 345520,
+            "14": 330068,
+            "15": 556863,
+            "16": 436838,
+            "17": 359565,
+            "18": 444323,
+            "19": 360602,
+            "20": 9314
+          },
+          "largest_gap_seconds": 37821
+        },
+        "scope_description": "All records in the published Ditto webmail-all archive; the entire first-seen-normalized key sequence matches the published CMU FIU Webmail reference. Operation types come from Ditto. Original payloads are unavailable."
+      }
+    }
+  }
+}
